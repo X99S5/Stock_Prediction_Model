@@ -1,47 +1,21 @@
+"""Runs all src modules together. Also controls Pause Timer."""
+import src
+
 def main():
-    """This method should be called when the program is run from the command line.
-    The aim of the method is to run the complete, automated workflow you developed
-    to solve the assignment.
+    """Runs all src modules together. Also controls Pause Timer."""
 
-    This function will be called by the automated test suite, so make sure that
-    the function signature is not changed, and that it does not require any
-    user input.
+    stock_data,fr_data,conpi_data,oil_data = src.data_aquire()
+    stock_data_resample,exogenous_df,merged_df = src.data_preprocess(stock_data,fr_data,
+                                                                     conpi_data,oil_data)
+    src.data_eda(stock_data_resample,exogenous_df,merged_df)
+    src.data_test(stock_data_resample, exogenous_df)
 
-    If your workflow requires mongoDB (or any other) credentials, please commit them to
-    this repository.
-    Remember that if the workflow pushed new data to a mongo database without checking
-    if the data is already present, the database will contain copies of the data and
-    skew the results.
-
-    After having implemented the method, please delete this docstring and replace
-    it with a description of what your main method does.
-
-    Hereafter, we provide a **volountarily suboptimal** example of how to structure
-    your code. You are free to use this structure, and encouraged to improve it.
-
-    Example:
-        def main():
-            # acquire the necessary data
-            data = acquire()
-
-            # store the data in MongoDB Atlas or Oracle APEX
-            store(data)
-
-            # format, project and clean the data
-            proprocessed_data = preprocess(data)
-
-            # perform exploratory data analysis
-            statistics = explore(proprocessed_data)
-
-            # show your findings
-            visualise(statistics)
-
-            # create a model and train it, visualise the results
-            model = fit(proprocessed_data)
-            visualise(model)
-    """
-    raise NotImplementedError()
-
+    #Note the blank graphs appearing as the code runs do not stop the code !
+    #When the code reaches the end these graphs will be plotted appropriately.
+    #Then the code will be paused for 15 seconds then it will close automatically.
+    #This is to allow visualisation of plots.Increase time below as you see fit.
+    plt.pause(15)
 
 if __name__ == "__main__":
+    from matplotlib import pyplot as plt
     main()
