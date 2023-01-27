@@ -1,7 +1,12 @@
 name: daps-final
 
 dependencies:
-  - python=<desired-python-version>
+  - python=3.10.8
   - pip
   - pip:
     - numpy
+    - matplotlib
+    - pandas
+    - seaborn
+    - statsmodels
+    - pmdarima
