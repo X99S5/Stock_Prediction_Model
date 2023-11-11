@@ -1,6 +1,6 @@
 # Stock_Prediction_Model
 
-The issue this report/project addresses relates to the difficult problem of predicting stock prices on a day-to-day
+The issue this project addresses relates to the difficult problem of predicting stock prices on a day-to-day
 basis. The reason why stocks are so hard to predict stems from them reacting instantly to any shifts in market
 information and to the fact that they can react to many obtuse factors which are hard to quantify. There are
 however universal economic factors which reflect the trend in stock prices, somewhat accurately. These factors
