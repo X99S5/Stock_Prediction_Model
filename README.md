@@ -26,4 +26,6 @@ predicting solely based on previous values.
 
 Graphs/plots related to the results of this project can be seen in the src/graphs folder.
 
+All the code with related graphs can also be seen in Assignment.pynb
+
 The best preforming model's predictive accuracy was approximatly 3%. 
