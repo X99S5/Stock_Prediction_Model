@@ -1,4 +1,4 @@
-# Stock_Prediction_Model
+# Stock Prediction Model
 
 The issue this project addresses relates to the difficult problem of predicting stock prices on a day-to-day
 basis. The reason why stocks are so hard to predict stems from them reacting instantly to any shifts in market
