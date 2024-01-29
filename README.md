@@ -28,4 +28,4 @@ Graphs/plots related to the results of this project can be seen in the src/graph
 
 All the code with related graphs can also be seen in Assignment.ipynb
 
-The best preforming model's predictive accuracy was approximatly 3%. 
+The best preforming model's predictive accuracy was approximatly 3% above the baseline. 
